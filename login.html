@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel ="stylesheet" href="toolbar.css">
+	
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html"><img src="logo.png" class="logo"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="howit.html">How It Works</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li class="active"><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </div>
+</nav>
+	<div class="container">
+    <fieldset>
+      <legend>Login Here</legend>
+      <form name="login">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="textbox" class="form-control" id="username" name="username" placeholder="Enter User Name">
+        </div> 
+        <div class="form-group">
+          <label for="pwd">Username:</label>
+          <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter Password">
+        </div> 
+        <div class="form-group">
+        <button type="submit" class="btn btn-default">Submit</button></div>
+        <div class="form-group">
+          New User? <a href="register.html">Register Here!</a>
+        </div>
+        <div class="form-group">
+          <a href="forgotPass.html">Forgot Password</a>
+        </div>
+      
+      </form>
+    </fieldset>
+  </div>
+</body>
+</html>
