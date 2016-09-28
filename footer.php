@@ -1,79 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>How It Works</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <link rel ="stylesheet" href="toolbar.css">
-  <link rel="stylesheet" type="text/css" href="footer.css">
-  <link rel="stylesheet" href="font-awesome-4.6.3\css\font-awesome.min.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-</head>
-<body>
-	
-	<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.html"><img src="logo.png" class="logo"></a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li></li>
-      <li><a href="services.html">Services</a></li>
-      <li class='active'><a href="howit.html">How It Works</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="register.html">Register</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="container">
-  <div>
-    <img src="choose.png" style="float:right">  
-  </div>
-  <div>
-    <img src="book.png" style="float:left">
-  </div>
-  <div>
-    <img src="chat.png" style="float:right">
-  </div>
-  <div>
-    <img src="relax.png" style="float:left">
-  </div>
-</div>
 <nav class="navbar navbar-inverse .footer-bs">
   <div class="container-fluid">
     <div class="row center">
-      <div class="col-md-4">
-        <h2 class="whitefoot">UrbanRun Inc.</h2>
+      <div class="col-md-4 container">
+      <div class="row">
         <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
-            </div>
-            
+            <h2 class="whitefoot">UrbanRun Inc.</h2>
+        </div>
+       </div>  
+       <div class="row">  
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
         <p class="whitefoot">Computer Dept., 6th Floor, Dwarkadas J. Sanghvi College of Engineering, J.V.P.D. Scheme, Vile Parle (West), Mumbai - 400056, Maharashtra, India</p>
         <p class="whitefoot">© 2016 UrbanRun Inc., All rights reserved</p>
         </div>
       </div>
-      <div class="col-md-4">
-      <h4 class="whitefoot">Menu-</h4>
+      </div>
+      <div class="col-md-4 container">
+      <div class="row">
        <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-3" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
+            <h4 class="whitefoot">Menu-</h4>
             </div>
+            </div>
+            <div class="row">
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
       <div class="col-md-6">
         <ul type="none">
@@ -88,14 +43,17 @@
       </div>
       </div>
       </div>
+      </div>
+      <div class="row">
       <div class="col-md-4">
-        <h4 class="whitefoot">Follow Us</h4>
         <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-4" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="glyphicon glyphicon-plus"></span>
             </button>
+            <h4 class="whitefoot">Follow Us</h4>
             </div>
+            
              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-4">
                 <ul type="none" class="foot1">
                     <li><a href="#"><span class="fa fa-google-plus" style="font-size:35px"></span>Google Plus</a></li>
@@ -106,7 +64,6 @@
                 </div>
       </div>
     </div>
+    </div>
   </div>
 </nav>
-</body>
-</html>

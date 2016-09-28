@@ -1,5 +1,5 @@
 .mainpicclass{
-		background-image: url("homeimage.jpg");
+		background-image: url("../img/homeimage.jpg");
 		height: 500px;
 		width: 110%;
 		margin:0 auto;
@@ -30,4 +30,8 @@ input[type=text] {
 
 input[type=text]:focus {
     width: 50%;
+}
+
+.navbar{
+    margin-bottom: 0px;
 }
