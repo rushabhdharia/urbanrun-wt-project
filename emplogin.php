@@ -1,22 +1,22 @@
 <?php
 session_start();
 include_once 'dbconnect.php';
-if(isset($_SESSION['user'])!="")
+if(isset($_SESSION['emp'])!="")
 {
-	header("Location: home.php");
+	header("Location: emphome.php");
 }
 if(isset($_POST['btn-login']))
 {
 	$email = mysqli_real_escape_string($conn,$_POST['email']);
 	$upass = mysqli_real_escape_string($conn,$_POST['pass']);
 	$hashed_password = hash('sha256', $upass);
-	$res=mysqli_query($conn,"SELECT * FROM tbl_users WHERE userEmail='$email'");
+	$res=mysqli_query($conn,"SELECT * FROM tbl_emp WHERE empEmail='$email'");
 	$row=mysqli_fetch_array($res);
  
-	if($row['userPassword']== $hashed_password)
+	if($row['empPassword']== $hashed_password)
 	{
-		$_SESSION['user'] = $row['userId'];
-		header("Location: home.php");
+		$_SESSION['emp'] = $row['empId'];
+		header("Location: emphome.php");
 	}
 	else
 	{
@@ -32,12 +32,13 @@ if(isset($_POST['btn-login']))
 <html lang="en">
 <head>
 	<?php include 'head.php';?>
+
 </head>
 <body>
 	<?php include 'navbar.php';?>
-	<div class="container container-height">
+	<div class="container">
 	    <fieldset>
-	      <legend>User Login</legend>
+	      <legend>Employee Login</legend>
 	      <form name="login" method="post" autocomplete = "off">
 	        <div class="form-group">
 	          <label for="email">Email:</label>
@@ -51,16 +52,14 @@ if(isset($_POST['btn-login']))
 	        	<button type="submit" class="btn btn-default" name="btn-login">Sign In</button>
 	        </div>
 	        <div class="form-group">
-	          New User? <a href="register.php">Register Here!</a>
+	          New Employee? <a href="empregister.php">Register Here!</a>
 	        </div>
 	        <div class="form-group">
-	         	Employee? <a href="emplogin.php">Login here</a>
+	          User? <a href="login.php">Login Here</a>
 	        </div>      
 	      </form>
 	    </fieldset>
   	</div>
-  	<footer>
 	<?php include 'footer.php';?>
-	</footer>
 </body>
 </html>

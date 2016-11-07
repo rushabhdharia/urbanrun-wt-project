@@ -1,9 +1,9 @@
 <?php
 session_start();
 //include once 'dbconnect.php'; 
-if(isset($_SESSION['user'])!="")
+if(isset($_SESSION['emp'])!="")
 {
-  header("Location: home.php");
+  header("Location: emphome.php");
 }
 ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@ if(isset($_SESSION['user'])!="")
          <form method="post" role="form" id="register-form" autocomplete="off">
          
          <div class="form-header">
-         	<h3 class="form-title">User Sign Up</h3>
+         	<h3 class="form-title">Employee Sign Up</h3>
                       
          
                       
@@ -71,8 +71,8 @@ if(isset($_SESSION['user'])!="")
             </div>
             <div>
             Click here to
-              <a href="empregister.php">
-                Sign Up as Employee
+              <a href="register.php">
+                Sign Up as User
               </a>
             </div>
 
@@ -87,7 +87,7 @@ if(isset($_SESSION['user'])!="")
     <script src="assets/jquery-1.12.4-jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/jquery.validate.min.js"></script>
-    <script src="assets/register.js"></script>
+    <script src="assets/empregister.js"></script>
    
 </body>
 </html>
