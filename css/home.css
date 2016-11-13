@@ -1,37 +1,15 @@
 .mainpicclass{
-		background-image: url("../img/homeimage.jpg");
+		
 		height: 500px;
 		width: 110%;
 		margin:0 auto;
-		text-align: center;
-		align-self: center;
-		background-repeat: no-repeat;
-		background-size: cover;
 	}
 
 .floating-box {
     display: inline-block;
 }
 
-input[type=text] {
-    width: 20%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-image: url('search.png');
-    background-color: white;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-
-}
-
-input[type=text]:focus {
-    width: 50%;
-}
-
 .navbar{
     margin-bottom: 0px;
 }
+

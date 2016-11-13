@@ -26,10 +26,7 @@ session_start();
     if (!$_POST['name']) {
       $errName = 'Please enter your name';
     }
-    if(preg_match($nameval, $name))
-    {
-      $errName = 'Please enter only Characters';
-    }
+    
     //Check if phone number has been entered
     if(!$_POST['pno']){
       $errPhone = "Please Enter your phone number";

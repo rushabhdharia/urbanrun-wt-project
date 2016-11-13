@@ -25,7 +25,8 @@ if($conn)
 if(isset($_GET['submit1'])){
 	if($conn)
 	{	
-		$jobid = mysqli_real_escape_string($conn,$_GET['selectedJobId']);
+		$selectjob1=$_GET['selectedJobId'];
+		$jobid = mysqli_real_escape_string($conn,$selectjob1);
 		$emailquery="SELECT tbl_users.userEmail as email FROM tbl_users, order_details WHERE tbl_users.userId = order_details.userId AND order_details.jobId=".$jobid;
 		$emailreq= mysqli_query($conn,$emailquery);
 		$reqemail=mysqli_fetch_array($emailreq);
@@ -39,9 +40,17 @@ if(isset($_GET['submit1'])){
 	    $headers .= "X-Mailer: PHP/" . phpversion();
 	    $headers .= "X-Priority: 1" . "\r\n"; 
 	    $body="Sorry to inform you but the job (JOB ID =".$jobid.") you requested for has been declined by the employee. Please make a new request";
-		mail ($to, $subject, $body, $headers);
-		$sql = "DELETE FROM order_details WHERE jobId=".$jobid;
-		$result = mysqli_query($conn,$sql);
+	    $sql = "DELETE FROM order_details WHERE jobId=".$jobid;
+		$result1 = mysqli_query($conn,$sql);
+		if($result1){
+
+			mail ($to, $subject, $body, $headers);
+			header("Location:emphome.php");
+		}else
+		{
+			echo mysqli_error($conn);
+		}
+		
 	}
 }	
 ?>
@@ -61,15 +70,16 @@ if(isset($_GET['submit1'])){
 		<center><h3> Hi <?php echo $empRow['name']; ?></h3></center>
 	</div>
 
-    <center>	
-		<h3>Jobs Available</h3>	
+    	
+			
 		<?php
 			if(mysqli_num_rows($result)>0)
 			{
+				echo "<center><h3>Jobs Available</h3></center>";
 		?>
-	</center>
+	
 
-		<form name ='selectjob' method="post" class="form-horizontal" >
+		
 		<div class="table-responsive">
 		<table class="table table-hover">
 		<tr>
@@ -110,8 +120,10 @@ if(isset($_GET['submit1'])){
 					<td>".$rows['pno']."</td>
 					<td>".$totalcost."</td>
 					<td>
+					<form name ='selectjob' type='post' >
 						<input type='hidden' name='selectedJobId' value='".$rows['jobId']."'/>
 						<button type='submit' name='submit1' id='submit1' class='btn btn-danger'>Decline Job Request</button>
+						</form> 
 					</td>
 				</tr>\n
 				";
@@ -119,7 +131,7 @@ if(isset($_GET['submit1'])){
 		?>  
 		</table> 
 		</div>
-		</form> 
+		
 		
 		
     </div>
